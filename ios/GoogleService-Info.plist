@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>33657434786-p8bt4kmajc7fh5b2qr3frffn07n1p4u4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.33657434786-p8bt4kmajc7fh5b2qr3frffn07n1p4u4</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>33657434786-ko6ir61263m4qr32h7s64u44o09agg53.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCyzpMd1Wg-9f3O1_xRd0qxQtO_q7g3fkk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>33657434786</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.suhaibwebb.app</string>
+	<key>PROJECT_ID</key>
+	<string>swiss-app-280415</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swiss-app-280415.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:33657434786:ios:4599fdd5986ae40c26ddfb</string>
+	<key>DATABASE_URL</key>
+	<string>https://swiss-app-280415.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "33657434786",
+    "firebase_url": "https://swiss-app-280415.firebaseio.com",
+    "project_id": "swiss-app-280415",
+    "storage_bucket": "swiss-app-280415.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33657434786:android:659f4b627bff86e426ddfb",
+        "android_client_info": {
+          "package_name": "com.suhaibwebb.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33657434786-ko6ir61263m4qr32h7s64u44o09agg53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.suhaibwebb.app",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "33657434786-a549rc74ofc7fj0m9cjcgifffjs2iqbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZFFrb9lDjeW_CPrEkdP-Hd8Lp0Fjh048"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33657434786-a549rc74ofc7fj0m9cjcgifffjs2iqbl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "33657434786-p8bt4kmajc7fh5b2qr3frffn07n1p4u4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.suhaibwebb.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33657434786:android:65bc80c588581d5626ddfb",
+        "android_client_info": {
+          "package_name": "com.swissapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33657434786-a549rc74ofc7fj0m9cjcgifffjs2iqbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZFFrb9lDjeW_CPrEkdP-Hd8Lp0Fjh048"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33657434786-a549rc74ofc7fj0m9cjcgifffjs2iqbl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "33657434786-p8bt4kmajc7fh5b2qr3frffn07n1p4u4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.suhaibwebb.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
