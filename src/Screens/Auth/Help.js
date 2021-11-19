@@ -1,3 +1,9 @@
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable prettier/prettier */
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable no-unused-vars */
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -5,17 +11,10 @@ import {
   View,
   Text,
   Image,
-  ImageBackground,
-  Animated,
   TouchableOpacity,
-  TextInput,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
-import reducer from '../../Reducers/reducers';
-import Spinner from 'react-native-loading-spinner-overlay';
 import {resetStateFP} from '../../Actions/actions';
 import {connect} from 'react-redux';
-import {API_LOGIN_USER, FORGOT_PASSWORD, LOGIN_ERROR} from '../../Actions/type';
 
 class Help extends Component {
    
@@ -29,7 +28,7 @@ class Help extends Component {
     };
   }
   UNSAFE_componentWillMount(){
-    this.props.resetStateFP()
+    this.props.resetStateFP();
   }
   
  
@@ -73,10 +72,6 @@ class Help extends Component {
           }}>
            
         </View>
-        
-        
-
-        
       </View>
     );
   }
@@ -129,7 +124,7 @@ const styles = StyleSheet.create({
   infoText: {
     color: 'white',
     fontFamily: 'Avenir-Medium',
-    letterSpacing: -0.18,
+    letterSpacing: -0.20,
     lineHeight: 17,
     fontSize: 15,
     marginTop: 10,

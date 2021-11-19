@@ -1,3 +1,10 @@
+/* eslint-disable space-infix-ops */
+/* eslint-disable no-alert */
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable eqeqeq */
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-unused-vars */
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -5,16 +12,12 @@ import {
   View,
   Text,
   Image,
-  ImageBackground,
-  Animated,
   TouchableOpacity,
   TextInput,
   KeyboardAvoidingView,
   ScrollView,
   Platform,
-  ActivityIndicator,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class RegisterScreenOne extends Component {
   state = {
@@ -22,56 +25,34 @@ export default class RegisterScreenOne extends Component {
     lastname: '',
     firstnameVerify: false,
     lastnameVerify: false,
+    firstnameError: '',
+    lastnameError: '',
   };
-
   register() {
+    console.log("object", this.state);
+
     // this.props.navigation.navigate('LoginScreen');
     if (this.state.firstname.length == 0) {
-      alert('Enter First Name');
+      this.setState({errorfirst: true, firstnameError: 'Please enter first name !'});
+      this.setState({firstnameVerify: false});
+      return;
+    }
+    if (this.state.firstname.length > 20) {
+      this.setState({error: true, firstnameError: 'First name must me less than 20 characters !'});
       this.setState({firstnameVerify: false});
       return;
     }
     if (this.state.lastname.length == 0) {
-      alert('Enter Last Name');
+      this.setState({errorsecond: true, lastnameError: 'Please enter last name !'});
       this.setState({lastnameVerify: false});
-
+      return;
+    }
+    if (this.state.lastname.length > 20) {
+      this.setState({error: true, lastnameError: 'Last name must me less than 20 characters !'});
+      this.setState({lastnameVerify: false});
       return;
     }
     this.props.navigation.navigate('Register', this.state);
-
-    // if (this.state.username.length == 0) {
-    //   alert('Enter User Name');
-    //   this.setState({usernameVerify: false});
-
-    //   return;
-    // }
-    // if (this.state.email.length == 0) {
-    //   alert('Enter Email');
-    //   this.setState({emailVerify: false});
-
-    //   return;
-    // }
-
-    // if (this.state.pass.length == 0) {
-    //   alert('Enter password');
-    //   this.setState({passwordVerify: false});
-
-    //   return;
-    // }
-
-    // if (this.state.pass !== this.state.confirmpass) {
-    //   alert('Your password does not match');
-    //   this.setState({passwordVerify: false});
-
-    //   return;
-    // }
-
-    // if (this.state.phonenumber.length == 0) {
-    //   alert('Enter phonenumber');
-    //   this.setState({phonenumberVerify: false});
-
-    //   return;
-    // }
     // const data = {
     //   user_name: this.state.username,
     //   email: this.state.email,
@@ -119,7 +100,7 @@ export default class RegisterScreenOne extends Component {
               }}>
               <Text style={styles.nameHeading}>What's your name ?</Text>
               <Text style={styles.infoText}>
-                We need a litle bit more information to setup your account.
+                We need a little bit more information to setup your account.
               </Text>
             </View>
             <View style={{flex: 3, justifyContent: 'flex-start'}}>
@@ -128,31 +109,31 @@ export default class RegisterScreenOne extends Component {
               </View>
               <TextInput
                 placeholderTextColor="#fff"
-                // placeholder="First Name"
-                style={ styles.textInput
-                  // this.state.firstnameVerify == true
-                  //   ? styles.textInput
-                  //   : styles.textInputred
-                }
+                style={ styles.textInput}
                 onChangeText={text =>
-                  this.setState({firstname: text, firstnameVerify: true})
+                  this.setState({firstname: text, firstnameVerify: true, errorfirst: false})
                 }
               />
+              {this.state.errorfirst && (
+                <View>
+                <Text style={styles.errMsg}>{this.state.firstnameError}</Text>
+                </View>
+              )}
               <View style={[styles.tagline]}>
                 <Text style={[styles.text]}>Last Name</Text>
               </View>
               <TextInput
                 placeholderTextColor="#fff"
-                // placeholder="Last Name"
-                style={ styles.textInput
-                  // this.state.lastnameVerify == true
-                  //   ? styles.textInput
-                  //   : styles.textInputred
-                }
+                style={styles.textInput}
                 onChangeText={text =>
-                  this.setState({lastname: text, lastnameVerify: true})
+                  this.setState({lastname: text, lastnameVerify: true, errorsecond: false})
                 }
               />
+              {this.state.errorsecond && (
+                <View>
+                <Text style={styles.errMsg}>{this.state.lastnameError}</Text>
+                </View>
+              )}
             </View>
 
             {/* {this.state.lastnameVerify == true &&
@@ -168,7 +149,6 @@ export default class RegisterScreenOne extends Component {
                   <Text
                     style={{
                       textAlign: 'center',
-                      //   marginTop: 5,
                       color: '#ffffff',
                       fontFamily: 'Avenir-Light',
                       letterSpacing: -0.2,
@@ -244,11 +224,7 @@ export default class RegisterScreenOne extends Component {
                 </View>
                 <TextInput
                   placeholderTextColor="#fff"
-                  // placeholder="First Name"
                   style={styles.textInput
-                    // this.state.firstnameVerify == true
-                    //   ? styles.textInput
-                    //   : styles.textInputred
                   }
                   onChangeText={text =>
                     this.setState({firstname: text, firstnameVerify: true})
@@ -356,11 +332,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
   },
   section: {
-    // flex: 1,
-    // backgroundColor:'red',
-
     alignItems: 'center',
-    // marginHorizontal: 20,
   },
   logob: {
     width: 27,
@@ -371,9 +343,6 @@ const styles = StyleSheet.create({
   logo: {
     width: 54,
     height: 42,
-    // width: 70,
-    // height: 20,
-    // marginBottom: 15,
   },
   nameHeading: {
     color: 'white',
@@ -388,11 +357,10 @@ const styles = StyleSheet.create({
     color: 'white',
     fontFamily: 'Avenir-Medium',
     letterSpacing: -0.18,
-    lineHeight: 15,
+    lineHeight: 20,
     fontSize: 15,
     marginTop: 10,
     width: '80%',
-
     backgroundColor: 'black',
   },
   tagline: {
@@ -406,15 +374,15 @@ const styles = StyleSheet.create({
   text: {
     color: '#ffffff',
     fontFamily: 'Avenir-Light',
-    letterSpacing: -0.2,
+    letterSpacing: -0.3,
     lineHeight: 22,
     fontSize: 17,
   },
   continueButton: {
     alignSelf: 'center',
     justifyContent: 'center',
-    width: 148,
-    height: 42,
+    width: 150,
+    height: 40,
     opacity: 1,
     // marginTop: 70,
     borderColor: '#fff',
@@ -471,5 +439,11 @@ const styles = StyleSheet.create({
     marginTop: 25,
     flexDirection: 'column',
     justifyContent: 'center',
+  },
+  errMsg: {
+    // position: 'absolute',
+    color: 'red',
+    alignSelf: 'flex-start',
+    marginHorizontal: '10%',
   },
 });
