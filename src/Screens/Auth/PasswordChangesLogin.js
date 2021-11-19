@@ -1,3 +1,14 @@
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable no-useless-escape */
+/* eslint-disable semi */
+/* eslint-disable comma-dangle */
+/* eslint-disable space-infix-ops */
+/* eslint-disable quotes */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-unused-vars */
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -5,25 +16,18 @@ import {
   View,
   Text,
   Image,
-  ImageBackground,
-  Animated,
   TouchableOpacity,
   TextInput,
   KeyboardAvoidingView,
   ScrollView,
   Platform,
-  ActivityIndicator,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 import {postRequestLogin} from '../../Actions/actions';
 import {connect} from 'react-redux';
-import {API_LOGIN_USER, LOGIN_ERROR} from '../../Actions/type';
+import {API_LOGIN_USER} from '../../Actions/type';
 import deviceStorage from '../../Actions/deviceStorage';
-import Spinner from 'react-native-loading-spinner-overlay';
 
-import DrawerScreen, {
-  AuthStackScreen,
-} from '../../Screens/Routes/AppNavigation';
+import DrawerScreen from '../../Screens/Routes/AppNavigation';
 class PasswordChangesLogin extends Component {
   state = {
     email: '',

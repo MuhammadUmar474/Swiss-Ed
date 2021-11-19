@@ -104,7 +104,6 @@ export default class LoginEmail extends Component {
 
         <View>
           <TextInput
-            placeholder="Email Address"
             value={this.state.email}
             placeholderTextColor="#ffffff"
             autoCapitalize="none"
@@ -205,9 +204,9 @@ const styles = StyleSheet.create({
     width: 150,
     height: 40,
     marginTop: 70,
-    borderColor: '#ffffff',
+    borderColor: '#fff',
     borderWidth: 1,
-    borderRadius: 20,
+    borderRadius: 40,
   },
   textInput: {
     alignSelf: 'center',

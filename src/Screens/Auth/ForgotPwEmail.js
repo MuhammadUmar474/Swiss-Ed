@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -17,8 +20,6 @@ import {forgotPasswordRequest} from '../../Actions/actions';
 import {connect} from 'react-redux';
 import {API_LOGIN_USER, FORGOT_PASSWORD, LOGIN_ERROR} from '../../Actions/type';
 class ForgotPwEmail extends Component {
-   
-
   constructor(props) {
     super(props);
     this.state = {

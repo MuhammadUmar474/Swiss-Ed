@@ -5,7 +5,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from '../Tabs/Home';
 import Profile from '../Tabs/Profile';
 import Favorites from '../Tabs/Favorites';
@@ -16,7 +15,6 @@ import LoginScreen from '../Auth/LoginScreen';
 import LoginEmail from '../Auth/LoginEmail';
 import LoginPassword from '../Auth/LoginPassword';
 import CourseDetail from '../CourseModule/CourseDetail';
-import CourseHeader from '../Shared/CourseHeader';
 import SwissScholarship from '../Menu/SwissScholarship';
 import LiveOfficeHours from '../Menu/LiveOfficeHours';
 import RegisterScreen from '../Auth/RegisterScreen';
@@ -58,10 +56,8 @@ export function AuthStackScreen({check}) {
       <AuthStack.Screen
         name="LoginScreen"
         component={LoginScreen}
-        options={({navigation, route}) => ({
+        options={() => ({
           drawerLockMode: 'locked-closed',
-          // headerTitle: props =>
-          // <Header navigation={navigation} title='SWISS' />
         })}
         headerStyle={{
           backgroundColor: 'red',
