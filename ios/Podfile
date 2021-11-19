@@ -3,6 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 target 'SWISSApp' do
   # Pods for SWISSApp
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -67,12 +68,5 @@ pod 'Firebase/Analytics'
   #end
 
 #end
-target 'SWISSApp-tvOS' do
-  # Pods for SWISSApp-tvOS
 
-  target 'SWISSApp-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
-end
